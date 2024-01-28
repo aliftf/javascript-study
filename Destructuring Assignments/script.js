@@ -39,4 +39,21 @@ function getName ({ name }) {
     console.log(name);
 }
 
+function getCity ({ location: { city, temp: temperature } }) {
+    console.log(`It's ${temperature} in ${city}.`);
+}
+
 getName(person);
+
+// Function Destructuring
+
+function calculation(a,b){
+    return {
+        plus: a + b,
+        minus: a - b,
+        multiply: a * b,
+        divide: a / b
+    }
+}
+
+const { minus, plus, multiply, divide } = calculation(10, 5);
